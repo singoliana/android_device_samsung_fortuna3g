@@ -23,8 +23,13 @@
 # Inherit from common fortuna-common
 -include device/samsung/fortuna-common/BoardConfigCommon.mk
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := fortuna3g
+
 # Kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_fortuna3g_defconfig
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := fortuna3g,SM-G530H
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/fortuna3g/init/init_fortuna3g.c
+TARGET_UNIFIED_DEVICE := true
